@@ -1,13 +1,14 @@
-@use "_custom.scss" as *;
-@use "_reset.scss" as *;
+@use '_custom.scss' as *;
+@use '_reset.scss' as *;
 
 .nav-bar {
   height: 45px;
-  background-color: $black;
+  background-color: $white;
   margin: 15px;
   border-radius: 22.5px;
   min-width: 320px;
   max-width: 100%;
+  transition: background 0.25s ease-in-out;
 
   display: flex;
   justify-content: space-between;
@@ -15,6 +16,11 @@
 
   position: sticky;
   top: 15px;
+
+  &.active {
+    background-color: $black;
+    transition: background 0.25s ease-in-out;
+  }
 }
 
 .nav-bar__icon {
@@ -32,8 +38,15 @@
     width: 30px;
     border-radius: 15px;
   }
+  &.active {
+    path {
+      fill: $black;
+      transition: fill 0.25s;
+    }
+  }
   path {
     fill: $white;
+    transition: fill 0.25s;
   }
 
   &.icon-selected {
