@@ -1,0 +1,77 @@
+@use "_custom.scss" as *;
+html {
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: $black;
+}
+
+a {
+  color: $status-green;
+  transition: all 0.25s ease-out;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+p {
+  line-height: 1.6;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}

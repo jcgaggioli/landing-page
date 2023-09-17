@@ -1,0 +1,44 @@
+@use "_custom.scss" as *;
+@use "_reset.scss" as *;
+
+.nav-bar {
+  height: 45px;
+  background-color: $black;
+  margin: 15px;
+  border-radius: 22.5px;
+  min-width: 320px;
+  max-width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 15px;
+}
+
+.nav-bar__icon {
+  margin: 7.5px;
+  background-color: transparent;
+  border: none;
+  color: $white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &.icon-highlighted {
+    background-color: $status-green;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+  }
+  path {
+    fill: $white;
+  }
+
+  &.icon-selected {
+    path {
+      fill: $brown-ligth;
+    }
+  }
+}

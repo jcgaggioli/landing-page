@@ -1,0 +1,26 @@
+@use "_styles.scss" as *;
+@use "_custom.scss" as *;
+@use "_reset.scss" as *;
+
+.small-p {
+  margin-top: 50px;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1em;
+}
+
+.single-p {
+  margin-top: 5px;
+  letter-spacing: 0.7em;
+  font-weight: 500;
+}
+
+.normal-p {
+  color: $gray;
+}
