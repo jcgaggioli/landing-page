@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const AboutMe = () => {
+const AboutMe = ({ language }) => {
   return (
     <div id="about-me" className="container">
       <div className="separator"></div>
-      <h2 className="title">ABOUT ME</h2>
+      <h2 className="title">{language === 'en' ? 'ABOUT ME' : 'SOBRE MI'}</h2>
       <p className="single-p">DEVELOPER</p>
       <p className="normal-p">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nam

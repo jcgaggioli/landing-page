@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const Contact = () => {
+const Contact = ({ language }) => {
   return (
     <div id="contact" className="container">
       <div className="separator"></div>
-      <h2 className="title">CONTACT</h2>
+      <h2 className="title">{language === 'en' ? 'CONTACT' : 'CONTACTO'}</h2>
       <p className="single-p">DEVELOPER</p>
       <p className="normal-p">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nam

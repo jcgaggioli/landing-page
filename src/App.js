@@ -7,9 +7,13 @@ import Contact from './component/Contact';
 import Projects from './component/Projects';
 import Frelance from './component/Frelance';
 import { useEffect, useState } from 'react';
+import Language from './component/Language';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
+  const [language, setLanguage] = useState('en');
+
+  //REFACTOR
   useEffect(() => {
     // Función para actualizar currentSection basado en la posición de la página
     const handleScroll = () => {
@@ -57,11 +61,12 @@ function App() {
   return (
     <div className="App">
       <NavBar currentSection={currentSection} />
-      <Home />
-      <AboutMe />
-      <Projects />
-      <Frelance />
-      <Contact />
+      <Home language={language} />
+      <AboutMe language={language} />
+      <Projects language={language} />
+      <Frelance language={language} />
+      <Contact language={language} />
+      <Language setLanguage={setLanguage} language={language} />
     </div>
   );
 }
