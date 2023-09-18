@@ -8,10 +8,21 @@ import Projects from './component/Projects';
 import Frelance from './component/Frelance';
 import { useEffect, useState } from 'react';
 import Language from './component/Language';
+import data from './assets/data.json';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
   const [language, setLanguage] = useState('en');
+
+  // const getData = async function () {
+  //   const res = await fetch('assets/data.json');
+  //   const data = await res.json();
+  //   console.log(data);
+  //   return data;
+  // };
+
+  // const data = getData();
+  // console.log(data);
 
   //REFACTOR
   useEffect(() => {
@@ -65,7 +76,7 @@ function App() {
       <AboutMe language={language} />
       <Projects language={language} />
       <Frelance language={language} />
-      <Contact language={language} />
+      <Contact language={language} contacts={data.contacts} />
       <Language setLanguage={setLanguage} language={language} />
     </div>
   );

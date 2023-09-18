@@ -1,0 +1,64 @@
+@use '_custom.scss' as *;
+@use '_reset.scss' as *;
+
+.contact__display {
+  // background-color: $brown-ligth;
+  height: 65vh;
+  margin-top: 20px;
+  display: flex;
+
+  aside {
+    height: 100%;
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.contact__icons-column {
+  // background-color: $black;
+  height: 100%;
+  width: 30%;
+  color: $black;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact__icon {
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.2;
+    transition: 0.25s ease-in-out;
+  }
+
+  &.active {
+    color: $intense;
+    font-weight: 700;
+    path {
+      fill: $intense;
+    }
+  }
+}
+
+.contact__name {
+  font-size: 30px;
+  font-weight: 800;
+  color: $intense;
+}
+
+.contact__user-name {
+  color: $status-green;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}

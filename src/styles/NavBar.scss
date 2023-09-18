@@ -32,6 +32,16 @@
   justify-content: space-around;
   align-items: center;
 
+  &:hover {
+    scale: 1.25;
+    transition: 0.1s ease-in-out;
+  }
+
+  &:active {
+    // transform: rotate(1turn);
+    // transition: transform 0.5s ease-in-out;
+  }
+
   &.icon-highlighted {
     background-color: $status-green;
     height: 30px;

@@ -1,0 +1,28 @@
+{
+  "contacts": [
+    {
+      "name": "LinkedIn",
+      "userName": "jcgaggioli",
+      "destiny": "https://www.linkedin.com/in/jcgaggioli/",
+      "icon": "../assets/icons/linkedin-logo-fill.svg"
+    },
+    {
+      "name": "GitHub",
+      "userName": "jcgaggioli",
+      "destiny": "https://github.com/jcgaggioli",
+      "icon": "../assets/icons/github-logo-fill.svg"
+    },
+    {
+      "name": "Mail",
+      "userName": "jcgaggioli@gmail.com",
+      "destiny": "jcgaggioli@gmail.com",
+      "icon": "../assets/icons/envelope-fill.svg"
+    },
+    {
+      "name": "Telegram",
+      "userName": "+34 663 086 825",
+      "destiny": "+34 663 086 825",
+      "icon": "../assets/icons/paper-plane-tilt-fill.svg"
+    }
+  ]
+}
