@@ -3,10 +3,10 @@
 
 .lang__button {
   height: 44px;
-  width: 84px;
+  width: 80px;
   border-radius: 22px;
   background-color: $black;
-  padding: 4px;
+  padding: 2px;
 
   position: fixed;
   bottom: 18px;
@@ -26,9 +26,12 @@
   cursor: pointer;
 
   &.active {
-    height: 36px;
-    border-radius: 18px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
     background-color: $white;
     color: $black;
+    transform: rotate(1turn);
+    transition: transform 0.5s ease-in-out;
   }
 }

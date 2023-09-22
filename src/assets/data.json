@@ -4,25 +4,25 @@
       "name": "LinkedIn",
       "userName": "jcgaggioli",
       "destiny": "https://www.linkedin.com/in/jcgaggioli/",
-      "icon": "../assets/icons/linkedin-logo-fill.svg"
+      "icon": "linkedin-logo-fill"
     },
     {
       "name": "GitHub",
       "userName": "jcgaggioli",
       "destiny": "https://github.com/jcgaggioli",
-      "icon": "../assets/icons/github-logo-fill.svg"
+      "icon": "github-logo-fill"
     },
     {
       "name": "Mail",
       "userName": "jcgaggioli@gmail.com",
       "destiny": "jcgaggioli@gmail.com",
-      "icon": "../assets/icons/envelope-fill.svg"
+      "icon": "envelope-fill"
     },
     {
       "name": "Telegram",
       "userName": "+34 663 086 825",
       "destiny": "+34 663 086 825",
-      "icon": "../assets/icons/paper-plane-tilt-fill.svg"
+      "icon": "paper-plane-tilt-fill"
     }
   ]
 }
