@@ -1,28 +1,7 @@
-@use "_styles.scss" as *;
-@use "_custom.scss" as *;
-@use "_reset.scss" as *;
-@use "_components.scss" as *;
-
-.project__card {
-  background-color: $gray;
-  border-radius: 10px;
-  height: 180px;
-
-  img {
-    border-radius: 10px;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.projects__container {
-  width: 100%;
-  margin-top: 30px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+@use '_styles.scss' as *;
+@use '_custom.scss' as *;
+@use '_reset.scss' as *;
+@use '_components.scss' as *;
 
 .App {
   background-color: $white;

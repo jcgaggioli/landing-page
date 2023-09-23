@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
+import '../styles/ProjectCard.scss';
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="project__card">
-      <img src={project.img} alt={project.name} />
+    <div className="project-card" style={{ '--img': project.img }}>
+      <img src={project.img} alt={project.img} />
+      <h4 className="project-card__title">{project.name}</h4>
     </div>
   );
 };

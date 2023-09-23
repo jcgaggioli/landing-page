@@ -1,0 +1,21 @@
+@use '_custom.scss' as *;
+@use '_reset.scss' as *;
+@use '_components.scss' as *;
+
+.projects__container {
+  width: 100%;
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+@media screen and (min-width: 720px) {
+  .projects__container {
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

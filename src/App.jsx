@@ -4,8 +4,8 @@ import { NavBar } from './component/NavBar';
 import Home from './component/Home';
 import AboutMe from './component/AboutMe';
 import Contact from './component/Contact';
-import Projects from './component/Projects';
-import Frelance from './component/Frelance';
+import Engineer from './component/Engineer';
+import Developer from './component/Developer';
 import { useEffect, useState } from 'react';
 import Language from './component/Language';
 import data from './assets/data.json';
@@ -13,16 +13,25 @@ import data from './assets/data.json';
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
   const [language, setLanguage] = useState('en');
+  const [screenSize, setScreenSize] = useState(0);
+  //choose the screen size
+  const handleResize = () => {
+    // if (window.innerWidth < 720) {
+    //   setScreenSize('mobile');
+    // } else {
+    //   if (window.innerWidth < 1024) {
+    //     setScreenSize('tablet');
+    //   } else {
+    //     setScreenSize('pc');
+    //   }
+    // }
+    setScreenSize(window.innerWidth);
+  };
 
-  // const getData = async function () {
-  //   const res = await fetch('assets/data.json');
-  //   const data = await res.json();
-  //   console.log(data);
-  //   return data;
-  // };
-
-  // const data = getData();
-  // console.log(data);
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+  });
 
   //REFACTOR
   useEffect(() => {
@@ -30,8 +39,8 @@ function App() {
     const handleScroll = () => {
       const home = document.getElementById('home');
       const about = document.getElementById('about-me');
-      const projects = document.getElementById('projects');
-      const freelance = document.getElementById('freelance');
+      const engineer = document.getElementById('engineer');
+      const developer = document.getElementById('developer');
       const contact = document.getElementById('contact');
       const scrollPosition = window.scrollY;
 
@@ -42,19 +51,19 @@ function App() {
         setCurrentSection('home');
       } else if (
         scrollPosition >= about.offsetTop &&
-        scrollPosition < projects.offsetTop
+        scrollPosition < engineer.offsetTop
       ) {
         setCurrentSection('about-me');
       } else if (
-        scrollPosition >= projects.offsetTop &&
-        scrollPosition < freelance.offsetTop
+        scrollPosition >= engineer.offsetTop &&
+        scrollPosition < developer.offsetTop
       ) {
-        setCurrentSection('projects');
+        setCurrentSection('engineer');
       } else if (
-        scrollPosition >= freelance.offsetTop &&
+        scrollPosition >= developer.offsetTop &&
         scrollPosition < contact.offsetTop
       ) {
-        setCurrentSection('freelance');
+        setCurrentSection('developer');
       } else if (scrollPosition >= contact.offsetTop) {
         setCurrentSection('contact');
       }
@@ -71,13 +80,25 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar currentSection={currentSection} />
-      <Home language={language} />
-      <AboutMe language={language} />
-      <Projects language={language} />
-      <Frelance language={language} />
-      <Contact language={language} contacts={data.contacts} />
-      <Language setLanguage={setLanguage} language={language} />
+      <NavBar currentSection={currentSection} screenSize={screenSize} />
+      <Home language={language} screenSize={screenSize} />
+      <AboutMe language={language} screenSize={screenSize} />
+      <Engineer
+        language={language}
+        projects={data.engProjects}
+        screenSize={screenSize}
+      />
+      <Developer language={language} screenSize={screenSize} />
+      <Contact
+        language={language}
+        contacts={data.contacts}
+        screenSize={screenSize}
+      />
+      <Language
+        setLanguage={setLanguage}
+        language={language}
+        screenSize={screenSize}
+      />
     </div>
   );
 }

@@ -24,5 +24,47 @@
       "destiny": "+34 663 086 825",
       "icon": "paper-plane-tilt-fill"
     }
+  ],
+  "engProjects": [
+    {
+      "name": "New TWY Golf apron - Ezeiza",
+      "year": 2020,
+      "description": "This is a project about something",
+      "img": "assets/img/madbus.png",
+      "caption": "This is a caption for the image",
+      "involvment": ""
+    },
+    {
+      "name": "Apron on former 05 header - Ezeiza",
+      "year": 2019,
+      "description": "This is a project about something else",
+      "img": "./assets/img/madbus.png",
+      "caption": "This is a caption for the second image",
+      "involvment": ""
+    },
+    {
+      "name": "Resurfacing RWY & TWYs - El Palomar Airport",
+      "year": 2018,
+      "description": "This is a project about something different",
+      "img": "%PUBLIC_URL%/assets/img/madbus.png",
+      "caption": "This is a caption for the third image",
+      "involvment": ""
+    },
+    {
+      "name": "New turnpad - Aeroparque Jorge Newbery",
+      "year": 2017,
+      "description": "This is a project about something else again",
+      "img": "assets/img/madbus.png",
+      "caption": "This is a caption for the fourth image",
+      "involvment": ""
+    },
+    {
+      "name": "Run-up test apron - Sevill Airport",
+      "year": 2016,
+      "description": "This is a project about something completely different",
+      "img": "/assets/img/madbus.png",
+      "caption": "This is a caption for the fifth image",
+      "involvment": ""
+    }
   ]
 }

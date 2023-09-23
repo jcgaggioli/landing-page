@@ -4,11 +4,11 @@ import '../styles/NavBar.scss';
 import { ReactComponent as UserIcon } from '../assets/icons/user-fill.svg';
 import { ReactComponent as PhoneIcon } from '../assets/icons/phone-fill.svg';
 import { ReactComponent as HomeIcon } from '../assets/icons/house-simple-fill.svg';
-import { ReactComponent as ProjectsIcon } from '../assets/icons/lightbulb-fill.svg';
+import { ReactComponent as EngineerIcon } from '../assets/icons/airplane-fill.svg';
 import { ReactComponent as ResumeIcon } from '../assets/icons/read-cv-logo-fill.svg';
 import { ReactComponent as MouseIcon } from '../assets/icons/mouse-simple-fill.svg';
 
-export const NavBar = ({ currentSection }) => {
+export const NavBar = ({ currentSection, screenSize }) => {
   const [NavBar, setNavBar] = useState(true);
 
   const changeBackground = () => {
@@ -43,7 +43,7 @@ export const NavBar = ({ currentSection }) => {
             : 'nav-bar__icon '
         }
       >
-        <HomeIcon />
+        {screenSize < 720 ? <HomeIcon /> : 'HOME'}
       </button>
       <button
         onClick={() => handleClick('about-me')}
@@ -57,13 +57,13 @@ export const NavBar = ({ currentSection }) => {
             : 'nav-bar__icon '
         }
       >
-        <UserIcon />
+        {screenSize < 720 ? <UserIcon /> : 'ABOUT ME'}
       </button>
 
       <button
-        onClick={() => handleClick('projects')}
+        onClick={() => handleClick('engineer')}
         className={
-          currentSection === 'projects'
+          currentSection === 'engineer'
             ? NavBar
               ? 'nav-bar__icon active icon-selected'
               : 'nav-bar__icon icon-selected'
@@ -72,12 +72,12 @@ export const NavBar = ({ currentSection }) => {
             : 'nav-bar__icon '
         }
       >
-        <ProjectsIcon />
+        {screenSize < 720 ? <EngineerIcon /> : 'ENGINEER'}
       </button>
       <button
-        onClick={() => handleClick('freelance')}
+        onClick={() => handleClick('developer')}
         className={
-          currentSection === 'freelance'
+          currentSection === 'developer'
             ? NavBar
               ? 'nav-bar__icon active icon-selected'
               : 'nav-bar__icon icon-selected'
@@ -86,7 +86,7 @@ export const NavBar = ({ currentSection }) => {
             : 'nav-bar__icon '
         }
       >
-        <MouseIcon />
+        {screenSize < 720 ? <MouseIcon /> : 'DEVELOPER'}
       </button>
       <button
         onClick={() => handleClick('contact')}
@@ -100,7 +100,7 @@ export const NavBar = ({ currentSection }) => {
             : 'nav-bar__icon '
         }
       >
-        <PhoneIcon />
+        {screenSize < 720 ? <PhoneIcon /> : 'CONTACT'}
       </button>
       <button
         // onClick={() => handleClick("download-cv")}

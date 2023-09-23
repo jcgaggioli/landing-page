@@ -1,0 +1,35 @@
+@use '_custom.scss' as *;
+@use '_reset.scss' as *;
+@use '_components.scss' as *;
+
+.project-card {
+  // background-color: $gray;
+  border-radius: 10px;
+  height: 220px;
+  color: $black;
+  width: 350px;
+
+  img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.project-card__title {
+  height: 20%;
+  text-align: left;
+  // background-color: transparent;
+}
+.project-card__desc {
+  height: 20%;
+  text-align: left;
+}
+
+@media screen and (min-width: 720px) {
+  .project-card {
+    // background-color: $gray;
+    width: 350px;
+  }
+}
