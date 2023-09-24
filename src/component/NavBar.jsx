@@ -7,8 +7,9 @@ import { ReactComponent as HomeIcon } from '../assets/icons/house-simple-fill.sv
 import { ReactComponent as EngineerIcon } from '../assets/icons/airplane-fill.svg';
 import { ReactComponent as ResumeIcon } from '../assets/icons/read-cv-logo-fill.svg';
 import { ReactComponent as MouseIcon } from '../assets/icons/mouse-simple-fill.svg';
+import Icon from './Icon';
 
-export const NavBar = ({ currentSection, screenSize }) => {
+export const NavBar = ({ currentSection, screenSize, text, sections }) => {
   const [NavBar, setNavBar] = useState(true);
 
   const changeBackground = () => {
@@ -29,79 +30,37 @@ export const NavBar = ({ currentSection, screenSize }) => {
     }
   };
 
+  console.log(sections);
+
   return (
     <nav id="nav-bar" className={NavBar ? 'nav-bar' : 'nav-bar active'}>
-      <button
-        onClick={() => handleClick('home')}
-        className={
-          currentSection === 'home'
-            ? NavBar
-              ? 'nav-bar__icon active icon-selected'
-              : 'nav-bar__icon icon-selected'
-            : NavBar
-            ? 'nav-bar__icon active'
-            : 'nav-bar__icon '
-        }
-      >
-        {screenSize < 720 ? <HomeIcon /> : 'HOME'}
-      </button>
-      <button
-        onClick={() => handleClick('about-me')}
-        className={
-          currentSection === 'about-me'
-            ? NavBar
-              ? 'nav-bar__icon active icon-selected'
-              : 'nav-bar__icon icon-selected'
-            : NavBar
-            ? 'nav-bar__icon active'
-            : 'nav-bar__icon '
-        }
-      >
-        {screenSize < 720 ? <UserIcon /> : 'ABOUT ME'}
-      </button>
+      {sections.map((sec, i) => (
+        <button
+          onClick={() => handleClick(sec.id)}
+          className={
+            currentSection === sec.id
+              ? NavBar
+                ? 'nav-bar__icon active icon-selected'
+                : 'nav-bar__icon icon-selected'
+              : NavBar
+              ? 'nav-bar__icon active'
+              : 'nav-bar__icon '
+          }
+        >
+          {screenSize < 720 ? (
+            <Icon
+              key={sec.name}
+              // id={contact.name}
+              icon={sec.icon}
+              // iconStyle={'nav-bar__icon '}
+              // onClick={''}
+            />
+          ) : (
+            text[`sec-${i + 1}`]
+          )}
+        </button>
+      ))}
 
-      <button
-        onClick={() => handleClick('engineer')}
-        className={
-          currentSection === 'engineer'
-            ? NavBar
-              ? 'nav-bar__icon active icon-selected'
-              : 'nav-bar__icon icon-selected'
-            : NavBar
-            ? 'nav-bar__icon active'
-            : 'nav-bar__icon '
-        }
-      >
-        {screenSize < 720 ? <EngineerIcon /> : 'ENGINEER'}
-      </button>
-      <button
-        onClick={() => handleClick('developer')}
-        className={
-          currentSection === 'developer'
-            ? NavBar
-              ? 'nav-bar__icon active icon-selected'
-              : 'nav-bar__icon icon-selected'
-            : NavBar
-            ? 'nav-bar__icon active'
-            : 'nav-bar__icon '
-        }
-      >
-        {screenSize < 720 ? <MouseIcon /> : 'DEVELOPER'}
-      </button>
-      <button
-        onClick={() => handleClick('contact')}
-        className={
-          currentSection === 'contact'
-            ? NavBar
-              ? 'nav-bar__icon active icon-selected'
-              : 'nav-bar__icon icon-selected'
-            : NavBar
-            ? 'nav-bar__icon active'
-            : 'nav-bar__icon '
-        }
-      >
-        {screenSize < 720 ? <PhoneIcon /> : 'CONTACT'}
-      </button>
       <button
         // onClick={() => handleClick("download-cv")}
         className="nav-bar__icon icon-highlighted"

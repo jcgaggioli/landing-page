@@ -9,22 +9,15 @@ import Developer from './component/Developer';
 import { useEffect, useState } from 'react';
 import Language from './component/Language';
 import data from './assets/data.json';
+import text from './assets/text.json';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
   const [language, setLanguage] = useState('en');
-  const [screenSize, setScreenSize] = useState(0);
+  const [screenSize, setScreenSize] = useState(window.innerWidth);
+
   //choose the screen size
   const handleResize = () => {
-    // if (window.innerWidth < 720) {
-    //   setScreenSize('mobile');
-    // } else {
-    //   if (window.innerWidth < 1024) {
-    //     setScreenSize('tablet');
-    //   } else {
-    //     setScreenSize('pc');
-    //   }
-    // }
     setScreenSize(window.innerWidth);
   };
 
@@ -44,6 +37,7 @@ function App() {
       const contact = document.getElementById('contact');
       const scrollPosition = window.scrollY;
 
+      //REFACTOR
       if (
         scrollPosition >= home.offsetTop &&
         scrollPosition < about.offsetTop
@@ -80,25 +74,27 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar currentSection={currentSection} screenSize={screenSize} />
-      <Home language={language} screenSize={screenSize} />
-      <AboutMe language={language} screenSize={screenSize} />
-      <Engineer
-        language={language}
-        projects={data.engProjects}
+      <NavBar
+        currentSection={currentSection}
         screenSize={screenSize}
+        text={language === 'en' ? text.navBar.en : text.navBar.es}
+        sections={text.navBar.sections}
       />
-      <Developer language={language} screenSize={screenSize} />
+      <Home text={language === 'en' ? text.home.en : text.home.es} />
+      <AboutMe text={language === 'en' ? text.aboutMe.en : text.aboutMe.es} />
+      <Engineer
+        text={language === 'en' ? text.engineer.en : text.engineer.es}
+        projects={data.engProjects}
+      />
+      <Developer
+        text={language === 'en' ? text.developer.en : text.developer.es}
+      />
       <Contact
         language={language}
         contacts={data.contacts}
         screenSize={screenSize}
       />
-      <Language
-        setLanguage={setLanguage}
-        language={language}
-        screenSize={screenSize}
-      />
+      <Language setLanguage={setLanguage} language={language} />
     </div>
   );
 }

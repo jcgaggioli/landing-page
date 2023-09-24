@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import '../styles/Contact.scss';
 import Icon from './Icon';
-import icons from '../assets/icons/_icons.svg';
 
 const Contact = ({ language, contacts }) => {
   const [currentContact, setCurrentContact] = useState(contacts[0]);
@@ -10,21 +9,6 @@ const Contact = ({ language, contacts }) => {
     y: 0,
     x: 0,
   });
-  let iconCounter = 0;
-  // const [finalCoords, setFinalCoords] = useState({ y: 0, x: 0});
-
-  // useEffect(() => {
-  //   setActiveElement( document.querySelector('.contact__icon.active'));
-
-  //   // setActiveElement( document.getElementById(contacts[0].name));
-  //   console.log(`Active element:`);
-  //   console.log(activeElement);
-  //   console.log(activeElementCoords);
-  //   if (activeElement) {
-  //     const elementRect = activeElement.getBoundingClientRect();
-  //     setActiveElementCoords({ y: elementRect.top, x: elementRect.left });
-  //   }
-  // },[iconElement]);
 
   const handleClick = (e, con) => {
     setCurrentContact(con);
@@ -39,13 +23,14 @@ const Contact = ({ language, contacts }) => {
     };
     setActiveElementCoords(coordinates);
   };
-
+  // REFACTOR
   return (
     <div id="contact" className="container">
       <div className="separator"></div>
       <h2 className="title">{language === 'en' ? 'CONTACT' : 'CONTACTO'}</h2>
       <div className="contact__display">
         <div className="contact__icons-column">
+          {' '}
           {contacts.map((contact, i) => {
             if (contacts.length === i + 1) {
               return (
@@ -78,7 +63,6 @@ const Contact = ({ language, contacts }) => {
               ];
             }
           })}
-
           {/* <div className="contact__black-line">.</div> */}
         </div>
         <aside>

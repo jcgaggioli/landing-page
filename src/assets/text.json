@@ -1,0 +1,78 @@
+{
+  "navBar": {
+    "sections": [
+      { "id": "home", "icon": "house-simple-fill" },
+      { "id": "about-me", "icon": "user-fill" },
+      { "id": "engineer", "icon": "airplane-fill" },
+      { "id": "developer", "icon": "mouse-simple-fill" },
+      { "id": "contact", "icon": "phone-fill" }
+    ],
+
+    "en": {
+      "sec-1": "HOME",
+      "sec-2": "ABOUT ME",
+      "sec-3": "ENGINEER",
+      "sec-4": "DEVELOPER",
+      "sec-5": "CONTACT"
+    },
+    "es": {
+      "sec-1": "INICIO",
+      "sec-2": "SOBRE MI",
+      "sec-3": "INGENIERO",
+      "sec-4": "DESARROLLADOR",
+      "sec-5": "CONTACTO"
+    }
+  },
+  "home": {
+    "en": {
+      "greet": "Hi! I am",
+      "name": "JUAN CRUZ",
+      "lastName": "GAGGIOLI",
+      "caption": "DEVELOPER / CIVIL ENGINEER",
+      "desc": "I'm looking for new challenges and to develope myself further in the technology sector."
+    },
+    "es": {
+      "greet": "Hola!, soy",
+      "name": "JUAN CRUZ",
+      "lastName": "GAGGIOLI",
+      "caption": "DESARROLLADOR / INGENIERO CIVIL",
+      "desc": "Estoy buscando nuevos retos y desarrollarme más en el sector de tecnologico."
+    }
+  },
+  "aboutMe": {
+    "en": {
+      "title": "ABOUT ME",
+      "caption": "DEVELOPER",
+      "desc": "Graduated from UTN (Argentina) as a civil engineer and with several years of experience in the airport sector. Looking to enter the world of web development and design as well as data analysis and processing. I am highly curious and eager to tackle new challenges."
+    },
+    "es": {
+      "title": "SOBRE MI",
+      "caption": "DESARROLLADOR",
+      "desc": "Egresado en UTN (Argentina) como ingeniero civil y con varios años de experiencia en el sector aeroportuario. Buscando entrar en el mundo del desarrollo y diseño web, así como el análisis y procesamiento de datos. Con mucha curiosidad ansioso por afrontar nuevos retos."
+    }
+  },
+  "developer": {
+    "en": {
+      "title": "DEVELOPER",
+      "caption": "DEVELOPER",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel neque sapiente incidunt eius sit soluta quibusdam nam autem ipsa eum assumenda debitis suscipit, sint ducimus in reiciendis unde nemo! Ad."
+    },
+    "es": {
+      "title": "DESARROLLADOR",
+      "caption": "DESARROLLADOR",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel neque sapiente incidunt eius sit soluta quibusdam nam autem ipsa eum assumenda debitis suscipit, sint ducimus in reiciendis unde nemo! Ad."
+    }
+  },
+  "engineer": {
+    "en": {
+      "title": "ENGINEER",
+      "caption": "ENGINEER",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel neque sapiente incidunt eius sit soluta quibusdam nam autem ipsa eum assumenda debitis suscipit, sint ducimus in reiciendis unde nemo! Ad."
+    },
+    "es": {
+      "title": "INGENIERO",
+      "caption": "INGENIERO",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel neque sapiente incidunt eius sit soluta quibusdam nam autem ipsa eum assumenda debitis suscipit, sint ducimus in reiciendis unde nemo! Ad."
+    }
+  }
+}
