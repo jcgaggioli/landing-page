@@ -16,9 +16,13 @@ function App() {
   const [language, setLanguage] = useState('en');
   const [screenSize, setScreenSize] = useState(window.innerWidth);
 
-  //choose the screen size
+  // Set screen size to
   const handleResize = () => {
-    setScreenSize(window.innerWidth);
+    if (window.innerWidth > 720 && screenSize < 720)
+      setScreenSize(window.innerWidth);
+
+    if (window.innerWidth < 720 && screenSize > 720)
+      setScreenSize(window.innerWidth);
   };
 
   // create an event listener
@@ -28,16 +32,46 @@ function App() {
 
   //REFACTOR
   useEffect(() => {
+    // const elements = [];
     // Función para actualizar currentSection basado en la posición de la página
     const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // text.navBar.sections.forEach((section, id) => {
+      //   elements[id] = document.getElementById(section.id);
+      // });
+
+      // elements.forEach((el, id) => {
+      //   if (id === elements.length) {
+      //     setCurrentSection(el.id);
+      //   } else {
+      //     if (
+      //       scrollPosition >= el.offsetTop &&
+      //       scrollPosition < elements[id + 1].offsetTop
+      //     ) {
+      //       console.log(`Element: `);
+      //       console.log(el);
+      //       console.log(`Next Element:`);
+      //       console.log(elements[id + 1]);
+      //       setCurrentSection(el.id);
+      //     }
+      //   }
+      //   // else {
+      //   //   setCurrentSection(elements[elements.length]);
+      //   // }
+      // });
+
+      //REFACTOR
+
       const home = document.getElementById('home');
       const about = document.getElementById('about-me');
       const engineer = document.getElementById('engineer');
       const developer = document.getElementById('developer');
       const contact = document.getElementById('contact');
-      const scrollPosition = window.scrollY;
 
-      //REFACTOR
+      // console.log(scrollPosition);
+      // console.log('Contact');
+      // console.log(contact.offsetTop - 20);
+
       if (
         scrollPosition >= home.offsetTop &&
         scrollPosition < about.offsetTop
@@ -55,10 +89,11 @@ function App() {
         setCurrentSection('engineer');
       } else if (
         scrollPosition >= developer.offsetTop &&
-        scrollPosition < contact.offsetTop
+        scrollPosition < contact.offsetTop - 20
+        // BUG - correct this without the '-20'
       ) {
         setCurrentSection('developer');
-      } else if (scrollPosition >= contact.offsetTop) {
+      } else if (scrollPosition > contact.offsetTop - 20) {
         setCurrentSection('contact');
       }
     };
@@ -80,7 +115,10 @@ function App() {
         text={language === 'en' ? text.navBar.en : text.navBar.es}
         sections={text.navBar.sections}
       />
-      <Home text={language === 'en' ? text.home.en : text.home.es} />
+      <Home
+        screenSize={screenSize}
+        text={language === 'en' ? text.home.en : text.home.es}
+      />
       <AboutMe text={language === 'en' ? text.aboutMe.en : text.aboutMe.es} />
       <Engineer
         text={language === 'en' ? text.engineer.en : text.engineer.es}

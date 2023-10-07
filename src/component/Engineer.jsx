@@ -5,6 +5,7 @@ import '../styles/Engineer.scss';
 const Engineer = ({ text, projects }) => {
   return (
     <div id="engineer" className="container">
+      <div className="engineer__img"> </div>
       <div className="separator"></div>
       <h2 className="title">{text.title}</h2>
       <div className="projects__container">

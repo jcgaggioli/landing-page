@@ -12,7 +12,6 @@ const Contact = ({ language, contacts }) => {
 
   const handleClick = (e, con) => {
     setCurrentContact(con);
-    console.log(e.target);
     const element = e.target.closest('.contact__icon');
     const iconFinal = document.querySelector('.contact__main-icon');
     const iconCoords = iconFinal.getBoundingClientRect();

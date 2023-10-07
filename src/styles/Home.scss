@@ -1,6 +1,6 @@
-@use "_styles.scss" as *;
-@use "_custom.scss" as *;
-@use "_reset.scss" as *;
+@use '_styles.scss' as *;
+@use '_custom.scss' as *;
+@use '_reset.scss' as *;
 
 .small-p {
   margin-top: 50px;
@@ -13,6 +13,8 @@
   font-weight: 700;
   letter-spacing: 0.15em;
   line-height: 1em;
+  z-index: 20;
+  position: relative;
 }
 
 .single-p {
@@ -23,4 +25,17 @@
 
 .normal-p {
   color: $gray;
+}
+
+#home {
+  display: flex;
+  justify-content: space-between;
+}
+.home__img {
+  img {
+    margin-top: 40px;
+    border-radius: 0px 0px 300px 200px;
+    width: 400px;
+    // filter: sepia() brightness(0.85) contrast(0.95);
+  }
 }

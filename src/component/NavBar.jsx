@@ -1,12 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import '../styles/NavBar.scss';
-import { ReactComponent as UserIcon } from '../assets/icons/user-fill.svg';
-import { ReactComponent as PhoneIcon } from '../assets/icons/phone-fill.svg';
-import { ReactComponent as HomeIcon } from '../assets/icons/house-simple-fill.svg';
-import { ReactComponent as EngineerIcon } from '../assets/icons/airplane-fill.svg';
-import { ReactComponent as ResumeIcon } from '../assets/icons/read-cv-logo-fill.svg';
-import { ReactComponent as MouseIcon } from '../assets/icons/mouse-simple-fill.svg';
 import Icon from './Icon';
 
 export const NavBar = ({ currentSection, screenSize, text, sections }) => {
@@ -30,8 +24,6 @@ export const NavBar = ({ currentSection, screenSize, text, sections }) => {
     }
   };
 
-  console.log(sections);
-
   return (
     <nav id="nav-bar" className={NavBar ? 'nav-bar' : 'nav-bar active'}>
       {sections.map((sec, i) => (
@@ -48,13 +40,7 @@ export const NavBar = ({ currentSection, screenSize, text, sections }) => {
           }
         >
           {screenSize < 720 ? (
-            <Icon
-              key={sec.name}
-              // id={contact.name}
-              icon={sec.icon}
-              // iconStyle={'nav-bar__icon '}
-              // onClick={''}
-            />
+            <Icon key={sec.name} icon={sec.icon} />
           ) : (
             text[`sec-${i + 1}`]
           )}
@@ -65,7 +51,12 @@ export const NavBar = ({ currentSection, screenSize, text, sections }) => {
         // onClick={() => handleClick("download-cv")}
         className="nav-bar__icon icon-highlighted"
       >
-        <ResumeIcon />
+        {screenSize < 720 ? (
+          <Icon key={'cv'} icon={'read-cv-logo-fill'} />
+        ) : (
+          'DOWNLOAD CV'
+        )}
+        {/* <Icon key={'cv'} icon={'read-cv-logo-fill'} /> */}
       </button>
     </nav>
   );
