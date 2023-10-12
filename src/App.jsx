@@ -125,7 +125,7 @@ function App() {
         projects={data.engProjects}
       />
       <Developer
-        text={language === 'en' ? text.developer.en : text.developer.es}
+        text={language === 'en' ? text.developer.en : text.developer.es} projects={data.devProjects}
       />
       <Contact
         language={language}

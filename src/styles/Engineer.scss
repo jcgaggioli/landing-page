@@ -15,20 +15,21 @@
 }
 #engineer {
   position: relative;
+  color: $black;
 }
-.engineer__img {
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  background-image: url('../assets/img/engineer-2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  // filter: sepia() brightness(0.5) contrast(0.5);
-}
+// .engineer__img {
+//   width: 100vw;
+//   height: 100%;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   z-index: -1;
+//   background-image: url('../assets/img/engineer-2.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-attachment: fixed;
+//   // filter: sepia() brightness(0.5) contrast(0.5);
+// }
 
 @media screen and (min-width: 720px) {
   .projects__container {

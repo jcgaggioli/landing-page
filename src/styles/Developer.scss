@@ -4,4 +4,8 @@
 #developer {
   background-color: #001125;
   color: $white;
+
+  & .normal-p {
+    color: $white;
+  }
 }
