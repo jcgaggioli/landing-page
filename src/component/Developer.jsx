@@ -1,6 +1,7 @@
 import React from 'react';
+import '../styles/Developer.scss';
 
-const Developer = ({screensize,text}) => {
+const Developer = ({ screensize, text }) => {
   return (
     <div id="developer" className="container">
       <div className="separator"></div>

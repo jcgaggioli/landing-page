@@ -4,7 +4,6 @@ import '../styles/_components.scss';
 import '../styles/Home.scss';
 
 const Home = ({ screenSize, text }) => {
-  console.log(screenSize);
   return (
     <div id="home" className="container">
       <div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/AboutMe.scss';
 
 const AboutMe = ({ screenSize, text }) => {
   return (

@@ -27,44 +27,54 @@
   ],
   "engProjects": [
     {
-      "name": "New TWY Golf apron - Ezeiza",
+      "name": "New TWY Golf apron",
       "year": 2020,
+      "airfield": "Ezeiza Airport",
       "description": "This is a project about something",
-      "img": "assets/img/madbus.png",
+      "img": "./assets/img/airfield-1.jpg",
       "caption": "This is a caption for the image",
-      "involvment": ""
+      "involvment": "",
+      "status": "cancelled"
     },
     {
-      "name": "Apron on former 05 header - Ezeiza",
+      "name": "Apron on former 05 header",
       "year": 2019,
+      "airfield": "Ezeiza Airport",
       "description": "This is a project about something else",
-      "img": "./assets/img/madbus.png",
+      "img": "./assets/img/airfield-2.jpg",
       "caption": "This is a caption for the second image",
-      "involvment": ""
+      "involvment": "",
+      "status": "delayed"
     },
     {
-      "name": "Resurfacing RWY & TWYs - El Palomar Airport",
+      "name": "Resurfacing RWY & TWYs",
       "year": 2018,
+      "airfield": "El Palomar Airport",
       "description": "This is a project about something different",
-      "img": "%PUBLIC_URL%/assets/img/madbus.png",
+      "img": "./assets/img/airfield-3.jpg",
       "caption": "This is a caption for the third image",
-      "involvment": ""
+      "involvment": "",
+      "status": "completed"
     },
     {
-      "name": "New turnpad - Aeroparque Jorge Newbery",
+      "name": "New turnpads on runway 16/34",
       "year": 2017,
+      "airfield": "Jorge Newbery Airport",
       "description": "This is a project about something else again",
-      "img": "assets/img/madbus.png",
+      "img": "./assets/img/airfield-4.jpg",
       "caption": "This is a caption for the fourth image",
-      "involvment": ""
+      "involvment": "",
+      "status": "cancelled"
     },
     {
-      "name": "Run-up test apron - Sevill Airport",
+      "name": "Run-up test apron",
       "year": 2016,
+      "airfield": "Seville Airport",
       "description": "This is a project about something completely different",
-      "img": "/assets/img/madbus.png",
+      "img": "./assets/img/airfield-5.jpg",
       "caption": "This is a caption for the fifth image",
-      "involvment": ""
+      "involvment": "",
+      "status": "delayed"
     }
   ]
 }
