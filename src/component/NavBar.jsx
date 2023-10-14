@@ -1,9 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
-import '../styles/NavBar.scss';
+import './NavBar.scss';
 import Icon from './Icon';
 
-export const NavBar = ({ currentSection, screenSize, text, sections }) => {
+export const NavBar = ({
+  currentSection,
+  screenSize,
+  text,
+  sections,
+  modal,
+}) => {
   const [NavBar, setNavBar] = useState(true);
 
   const changeBackground = () => {
@@ -23,6 +29,8 @@ export const NavBar = ({ currentSection, screenSize, text, sections }) => {
       });
     }
   };
+
+  const handleDownload = () => {};
 
   return (
     <nav id="nav-bar" className={NavBar ? 'nav-bar' : 'nav-bar active'}>
@@ -48,7 +56,7 @@ export const NavBar = ({ currentSection, screenSize, text, sections }) => {
       ))}
 
       <button
-        // onClick={() => handleClick("download-cv")}
+        onClick={modal.openModal}
         className="nav-bar__icon icon-highlighted"
       >
         {screenSize < 720 ? (
@@ -56,7 +64,6 @@ export const NavBar = ({ currentSection, screenSize, text, sections }) => {
         ) : (
           'DOWNLOAD CV'
         )}
-        {/* <Icon key={'cv'} icon={'read-cv-logo-fill'} /> */}
       </button>
     </nav>
   );

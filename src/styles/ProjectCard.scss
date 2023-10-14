@@ -3,7 +3,7 @@
 @use '_components.scss' as *;
 
 .project-card {
-  border-radius: 20px;
+  border-radius: 10px;
   color: $white;
   width: 100%;
   max-width: 400px;
@@ -14,7 +14,7 @@
   img {
     width: 100%;
     height: 240px;
-    border-radius: 20px;
+    border-radius: 10px;
     object-fit: cover;
   }
 
@@ -27,7 +27,7 @@
     width: 100%;
     height: 240px;
     background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, $white 175%);
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   &:hover {
@@ -62,7 +62,6 @@
   border-radius: 10px;
   font-size: 10px;
   text-align: center;
-
   &:after {
     content: var(--status);
     opacity: 0;
@@ -71,11 +70,11 @@
 
   &:hover {
     width: 70px;
-
     &:after {
       opacity: 1;
       height: 100%;
-      transition: 01s ease-in-out;
+      transition: 0.5s ease-in-out;
+      transition-delay: 0.25s;
       color: $white;
       text-align: center;
     }
@@ -97,8 +96,4 @@
 }
 
 @media screen and (min-width: 720px) {
-  .project-card {
-    // background-color: $gray;
-    width: 350px;
-  }
 }

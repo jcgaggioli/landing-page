@@ -10,11 +10,14 @@ import { useEffect, useState } from 'react';
 import Language from './component/Language';
 import data from './assets/data.json';
 import text from './assets/text.json';
+import Modals from './component/Modals';
+import { useModal } from './hooks/UseModal';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
   const [language, setLanguage] = useState('en');
   const [screenSize, setScreenSize] = useState(window.innerWidth);
+  const modals = { modal1: useModal(false) };
 
   // Set screen size to
   const handleResize = () => {
@@ -114,6 +117,7 @@ function App() {
         screenSize={screenSize}
         text={language === 'en' ? text.navBar.en : text.navBar.es}
         sections={text.navBar.sections}
+        modal={modals.modal1}
       />
       <Home
         screenSize={screenSize}
@@ -125,7 +129,8 @@ function App() {
         projects={data.engProjects}
       />
       <Developer
-        text={language === 'en' ? text.developer.en : text.developer.es} projects={data.devProjects}
+        text={language === 'en' ? text.developer.en : text.developer.es}
+        projects={data.devProjects}
       />
       <Contact
         language={language}
@@ -133,6 +138,7 @@ function App() {
         screenSize={screenSize}
       />
       <Language setLanguage={setLanguage} language={language} />
+      <Modals modals={modals} />
     </div>
   );
 }

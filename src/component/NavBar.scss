@@ -1,5 +1,5 @@
-@use '_custom.scss' as *;
-@use '_reset.scss' as *;
+@use '../styles/_custom.scss' as *;
+@use '../styles/_reset.scss' as *;
 
 .nav-bar {
   height: 45px;
