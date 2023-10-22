@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import '../styles/Developer.scss';
+import './Developer.scss';
 
 const Developer = ({ screensize, text, projects }) => {
   return (

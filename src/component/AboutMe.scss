@@ -1,0 +1,12 @@
+@use '../styles/_styles.scss' as *;
+@use '../styles/_custom.scss' as *;
+@use '../styles/_reset.scss' as *;
+
+#about-me {
+  background-color: #001125;
+  color: $white;
+
+  & .normal-p {
+    color: $white;
+  }
+}

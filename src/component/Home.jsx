@@ -1,7 +1,5 @@
 import React from 'react';
-import '../styles/_custom.scss';
-import '../styles/_components.scss';
-import '../styles/Home.scss';
+import './Home.scss';
 
 const Home = ({ screenSize, text }) => {
   return (

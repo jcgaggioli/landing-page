@@ -1,8 +1,13 @@
-import React from 'react';
 import ProjectCard from './ProjectCard';
-import '../styles/Engineer.scss';
+import './Engineer.scss';
+import { useModal } from '../hooks/UseModal';
+import Modal from './Modal';
+import React, { useState } from 'react';
 
 const Engineer = ({ text, projects }) => {
+  const projectModal = useModal(false);
+  const [curProject, setCurProject] = useState(projects[0]);
+
   return (
     <div id="engineer" className="container">
       {/* <div className="engineer__img"> </div> */}
@@ -12,9 +17,29 @@ const Engineer = ({ text, projects }) => {
       <p className="normal-p">{text.desc}</p>
       <div className="projects__container">
         {projects.map((project, id) => (
-          <ProjectCard key={id} project={project} />
+          <ProjectCard
+            key={id}
+            project={project}
+            openModal={projectModal.openModal}
+            setCurProject={setCurProject}
+          />
         ))}
       </div>
+      <Modal isOpen={projectModal.isOpen} closeModal={projectModal.closeModal}>
+        <img
+          className="project-card__img"
+          src={curProject.img}
+          alt={curProject.img}
+        />
+
+        <div className="project-card__desc">
+          <div className="project-card__title">
+            {curProject.name.toUpperCase()}
+          </div>
+          <div className="project-card__caption">{curProject.airfield}</div>
+          <p>{curProject.description}</p>
+        </div>
+      </Modal>
     </div>
   );
 };

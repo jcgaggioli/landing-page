@@ -1,6 +1,6 @@
-@use '_custom.scss' as *;
-@use '_reset.scss' as *;
-@use '_components.scss' as *;
+@use '../styles/_styles.scss' as *;
+@use '../styles/_custom.scss' as *;
+@use '../styles/_reset.scss' as *;
 
 .projects__container {
   margin: 15px;

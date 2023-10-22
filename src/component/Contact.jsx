@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import '../styles/Contact.scss';
+import './Contact.scss';
 import Icon from './Icon';
 
 const Contact = ({ language, contacts }) => {

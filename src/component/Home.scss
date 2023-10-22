@@ -1,6 +1,6 @@
-@use '_styles.scss' as *;
-@use '_custom.scss' as *;
-@use '_reset.scss' as *;
+@use '../styles/_styles.scss' as *;
+@use '../styles/_custom.scss' as *;
+@use '../styles/_reset.scss' as *;
 
 .small-p {
   margin-top: 50px;
@@ -35,8 +35,7 @@
 .home__img {
   img {
     margin-top: 40px;
-    border-radius: 0px 0px 300px 200px;
+    border-radius: 0px 0px 35% 60% / 30%;
     width: 400px;
-    // filter: sepia() brightness(0.85) contrast(0.95);
   }
 }

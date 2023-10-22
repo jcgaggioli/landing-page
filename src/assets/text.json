@@ -13,14 +13,30 @@
       "sec-2": "ABOUT ME",
       "sec-3": "ENGINEER",
       "sec-4": "DEVELOPER",
-      "sec-5": "CONTACT"
+      "sec-5": "CONTACT",
+      "download": "DOWNLOAD CV",
+      "modals": {
+        "downModal": {
+          "title": "Download CV",
+          "text": "Do you want to download the CV?",
+          "btn": "yes"
+        }
+      }
     },
     "es": {
       "sec-1": "INICIO",
       "sec-2": "SOBRE MI",
       "sec-3": "INGENIERO",
       "sec-4": "DESARROLLADOR",
-      "sec-5": "CONTACTO"
+      "sec-5": "CONTACTO",
+      "download": "DESCARGAR CV",
+      "modals": {
+        "downModal": {
+          "title": "Descargar CV",
+          "text": "Desea descargar el  CV?",
+          "btn": "si"
+        }
+      }
     }
   },
   "home": {

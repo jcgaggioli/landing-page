@@ -1,9 +1,22 @@
 import React from 'react';
-import '../styles/ProjectCard.scss';
 
-const ProjectCard = ({ project }) => {
+import './ProjectCard.scss';
+
+const ProjectCard = ({ project, openModal, setCurProject }) => {
+  const handleClick = function () {
+    setCurProject(project);
+    openModal();
+  };
+
   return (
-    <div className="project-card" style={{ '--img': project.img }}>
+    <div
+      className="project-card"
+      id={project.id}
+      style={{ '--img': project.img }}
+      onClick={() => {
+        handleClick();
+      }}
+    >
       <img className="project-card__img" src={project.img} alt={project.img} />
       <div
         className="project-card__status"

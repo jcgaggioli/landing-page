@@ -27,6 +27,7 @@
   ],
   "engProjects": [
     {
+      "id": "e01",
       "name": "New TWY Golf apron",
       "year": 2020,
       "airfield": "Ezeiza Airport",
@@ -37,6 +38,7 @@
       "status": "cancelled"
     },
     {
+      "id": "e02",
       "name": "Apron on former 05 header",
       "year": 2019,
       "airfield": "Ezeiza Airport",
@@ -47,6 +49,7 @@
       "status": "delayed"
     },
     {
+      "id": "e03",
       "name": "Resurfacing RWY & TWYs",
       "year": 2018,
       "airfield": "El Palomar Airport",
@@ -57,6 +60,7 @@
       "status": "completed"
     },
     {
+      "id": "e04",
       "name": "New turnpads on runway 16/34",
       "year": 2017,
       "airfield": "Jorge Newbery Airport",
@@ -67,6 +71,7 @@
       "status": "cancelled"
     },
     {
+      "id": "e05",
       "name": "Run-up test apron",
       "year": 2016,
       "airfield": "Seville Airport",
@@ -79,6 +84,7 @@
   ],
   "devProjects": [
     {
+      "id": "d01",
       "name": "MadBus",
       "year": 2020,
       "description": "This is a project about something",
@@ -88,6 +94,7 @@
       "status": "completed"
     },
     {
+      "id": "d02",
       "name": "Landing Page",
       "year": 2019,
       "description": "This is a project about something else",
@@ -97,6 +104,7 @@
       "status": "delayed"
     },
     {
+      "id": "d03",
       "name": "Traveler",
       "year": 2018,
       "description": "This is a project about something different",
@@ -106,6 +114,7 @@
       "status": "cancelled"
     },
     {
+      "id": "d04",
       "name": "VotAR",
       "year": 2017,
       "description": "This is a project about something else again",

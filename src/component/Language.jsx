@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Language.scss';
+import './Language.scss';
 
 const Language = ({language,setLanguage}) => {
 const toggleLanguage = (lang)=>{

@@ -2,24 +2,20 @@ import React from 'react';
 import { useState } from 'react';
 import './NavBar.scss';
 import Icon from './Icon';
+import { useModal } from '../hooks/UseModal';
+import Modal from './Modal';
 
-export const NavBar = ({
-  currentSection,
-  screenSize,
-  text,
-  sections,
-  modal,
-}) => {
+export const NavBar = ({ currentSection, screenSize, text, sections }) => {
+  const downModal = useModal(false);
   const [NavBar, setNavBar] = useState(true);
+
+  console.log(text);
 
   const changeBackground = () => {
     window.scrollY > 45 ? setNavBar(false) : setNavBar(true);
   };
 
-  window.addEventListener('scroll', changeBackground);
-
   const handleClick = sectionId => {
-    // Scroll
     const section = document.getElementById(sectionId);
     const yOffset = sectionId === 'home' ? 0 : section.offsetTop;
     if (section) {
@@ -30,7 +26,7 @@ export const NavBar = ({
     }
   };
 
-  const handleDownload = () => {};
+  window.addEventListener('scroll', changeBackground);
 
   return (
     <nav id="nav-bar" className={NavBar ? 'nav-bar' : 'nav-bar active'}>
@@ -56,15 +52,30 @@ export const NavBar = ({
       ))}
 
       <button
-        onClick={modal.openModal}
+        onClick={downModal.openModal}
         className="nav-bar__icon icon-highlighted"
       >
         {screenSize < 720 ? (
           <Icon key={'cv'} icon={'read-cv-logo-fill'} />
         ) : (
-          'DOWNLOAD CV'
+          text.download
         )}
       </button>
+
+      <Modal isOpen={downModal.isOpen} closeModal={downModal.closeModal}>
+        <h3>{text.modals.downModal.title}</h3>
+        <p>{text.modals.downModal.text}</p>
+        <a
+          href="https://drive.google.com/file/d/18E_uf3UNSxv8xJ62XJw38xAm5_3U81r4/view?usp=drive_link"
+          target="_blank"
+          rel="noreferrer"
+          download="CV_Gaggioli"
+          className="btn-accept"
+          onClick={downModal.closeModal}
+        >
+          {text.modals.downModal.btn.toUpperCase()}
+        </a>
+      </Modal>
     </nav>
   );
 };

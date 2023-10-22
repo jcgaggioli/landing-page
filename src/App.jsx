@@ -17,7 +17,7 @@ function App() {
   const [currentSection, setCurrentSection] = useState('home');
   const [language, setLanguage] = useState('en');
   const [screenSize, setScreenSize] = useState(window.innerWidth);
-  const modals = { modal1: useModal(false) };
+  const modals = { modal1: useModal(false), modalProjects: useModal(false) };
 
   // Set screen size to
   const handleResize = () => {
@@ -35,45 +35,16 @@ function App() {
 
   //REFACTOR
   useEffect(() => {
-    // const elements = [];
     // Función para actualizar currentSection basado en la posición de la página
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      // text.navBar.sections.forEach((section, id) => {
-      //   elements[id] = document.getElementById(section.id);
-      // });
-
-      // elements.forEach((el, id) => {
-      //   if (id === elements.length) {
-      //     setCurrentSection(el.id);
-      //   } else {
-      //     if (
-      //       scrollPosition >= el.offsetTop &&
-      //       scrollPosition < elements[id + 1].offsetTop
-      //     ) {
-      //       console.log(`Element: `);
-      //       console.log(el);
-      //       console.log(`Next Element:`);
-      //       console.log(elements[id + 1]);
-      //       setCurrentSection(el.id);
-      //     }
-      //   }
-      //   // else {
-      //   //   setCurrentSection(elements[elements.length]);
-      //   // }
-      // });
 
       //REFACTOR
-
       const home = document.getElementById('home');
       const about = document.getElementById('about-me');
       const engineer = document.getElementById('engineer');
       const developer = document.getElementById('developer');
       const contact = document.getElementById('contact');
-
-      // console.log(scrollPosition);
-      // console.log('Contact');
-      // console.log(contact.offsetTop - 20);
 
       if (
         scrollPosition >= home.offsetTop &&
@@ -117,7 +88,7 @@ function App() {
         screenSize={screenSize}
         text={language === 'en' ? text.navBar.en : text.navBar.es}
         sections={text.navBar.sections}
-        modal={modals.modal1}
+        // modal={modals.modal1}
       />
       <Home
         screenSize={screenSize}
@@ -127,6 +98,7 @@ function App() {
       <Engineer
         text={language === 'en' ? text.engineer.en : text.engineer.es}
         projects={data.engProjects}
+        openModal={modals.modalProjects}
       />
       <Developer
         text={language === 'en' ? text.developer.en : text.developer.es}
@@ -138,7 +110,6 @@ function App() {
         screenSize={screenSize}
       />
       <Language setLanguage={setLanguage} language={language} />
-      <Modals modals={modals} />
     </div>
   );
 }
