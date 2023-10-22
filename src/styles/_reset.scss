@@ -1,9 +1,10 @@
-@use "_custom.scss" as *;
+@use '_custom.scss' as *;
 html {
   box-sizing: border-box;
   font-family: $font-family;
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 *,
@@ -14,7 +15,7 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  overflow: auto;
   color: $black;
 }
 
