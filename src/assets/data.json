@@ -34,7 +34,7 @@
       "description": "This is a project about something",
       "img": "./assets/img/airfield-1.jpg",
       "caption": "This is a caption for the image",
-      "involvment": "",
+      "involvment": "Project Engineer",
       "status": "cancelled"
     },
     {
@@ -43,10 +43,15 @@
       "year": 2019,
       "airfield": "Ezeiza Airport",
       "description": "This is a project about something else",
-      "img": "./assets/img/airfield-2.jpg",
+      "img": "./assets/img/ezeiza01-01.jpg",
       "caption": "This is a caption for the second image",
-      "involvment": "",
-      "status": "delayed"
+      "involvment": "Inpsection",
+      "status": "delayed",
+      "imgs": [
+        "./assets/img/ezeiza01-01.jpg",
+        "./assets/img/ezeiza01-02.jpg",
+        "./assets/img/ezeiza01-03.jpg"
+      ]
     },
     {
       "id": "e03",
@@ -56,7 +61,7 @@
       "description": "This is a project about something different",
       "img": "./assets/img/airfield-3.jpg",
       "caption": "This is a caption for the third image",
-      "involvment": "",
+      "involvment": "Project Engineer",
       "status": "completed"
     },
     {
@@ -67,7 +72,7 @@
       "description": "This is a project about something else again",
       "img": "./assets/img/airfield-4.jpg",
       "caption": "This is a caption for the fourth image",
-      "involvment": "",
+      "involvment": "Project Engineer",
       "status": "cancelled"
     },
     {
@@ -78,7 +83,7 @@
       "description": "This is a project about something completely different",
       "img": "./assets/img/airfield-5.jpg",
       "caption": "This is a caption for the fifth image",
-      "involvment": "",
+      "involvment": "Project Engineer",
       "status": "delayed"
     }
   ],

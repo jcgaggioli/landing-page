@@ -25,20 +25,34 @@ const Engineer = ({ text, projects }) => {
           />
         ))}
       </div>
-      <Modal isOpen={projectModal.isOpen} closeModal={projectModal.closeModal}>
+      <Modal
+        isOpen={projectModal.isOpen}
+        closeModal={projectModal.closeModal}
+        title="ENGINEERING PROJECT"
+      >
+        <div className="modal-eng__title">{curProject.name.toUpperCase()}</div>
+        <div className="modal-eng__caption">
+          {curProject.airfield.toUpperCase()}
+        </div>
         <img
-          className="project-card__img"
+          className="modal-eng__img"
           src={curProject.img}
           alt={curProject.img}
         />
-
-        <div className="project-card__desc">
-          <div className="project-card__title">
-            {curProject.name.toUpperCase()}
-          </div>
-          <div className="project-card__caption">{curProject.airfield}</div>
-          <p>{curProject.description}</p>
-        </div>
+        <div className="modal-eng__sub">DESCRIPTION</div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+          voluptates modi odio ducimus quis? Hic nam minima commodi quae sequi,
+          voluptates corporis illo eveniet quisquam vitae ut temporibus, esse
+          impedit.
+        </p>
+        <div className="modal-eng__sub">INVOLVEMENT</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+          corporis sapiente quia quis non vel sunt dicta quibusdam sit! Quidem
+          magni consectetur vero officiis provident voluptatibus praesentium
+          quae distinctio autem?
+        </p>
       </Modal>
     </div>
   );

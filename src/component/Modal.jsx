@@ -1,7 +1,8 @@
 import React from 'react';
 import './Modal.scss';
+import Icon from './Icon';
 
-const Modal = ({ children, isOpen, closeModal }) => {
+const Modal = ({ children, isOpen, closeModal, title }) => {
   const handleModalContainerClick = e => {
     e.stopPropagation();
   };
@@ -9,9 +10,10 @@ const Modal = ({ children, isOpen, closeModal }) => {
   return (
     <article className={`modal ${isOpen && 'is-open'}`} onClick={closeModal}>
       <div className="modal__container" onClick={handleModalContainerClick}>
-        <button className="modal__close" onClick={closeModal}>
-          X
-        </button>
+        <div className="modal__header">
+          <div className="modal__title">{title}</div>
+          <Icon onClick={closeModal} icon={'close-btn'} />
+        </div>
         {children}
       </div>
     </article>

@@ -9,8 +9,6 @@ export const NavBar = ({ currentSection, screenSize, text, sections }) => {
   const downModal = useModal(false);
   const [NavBar, setNavBar] = useState(true);
 
-  console.log(text);
-
   const changeBackground = () => {
     window.scrollY > 45 ? setNavBar(false) : setNavBar(true);
   };

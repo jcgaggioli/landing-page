@@ -31,6 +31,33 @@
 //   // filter: sepia() brightness(0.5) contrast(0.5);
 // }
 
+.modal-eng__sub {
+  //REFACTOR --> This could be a scss component
+  width: 100%;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.modal-eng__title {
+  width: 100%;
+  text-align: left;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.modal-eng__caption {
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.modal-eng__img {
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 720px) {
   .projects__container {
     justify-content: space-around;
