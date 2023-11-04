@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './ProjectCard.scss';
 
 const ProjectCard = ({ project, openModal, setCurProject }) => {

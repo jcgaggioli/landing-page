@@ -3,6 +3,7 @@ import './Engineer.scss';
 import { useModal } from '../hooks/UseModal';
 import Modal from './Modal';
 import React, { useState } from 'react';
+import Slides from './Slides';
 
 const Engineer = ({ text, projects }) => {
   const projectModal = useModal(false);
@@ -34,11 +35,21 @@ const Engineer = ({ text, projects }) => {
         <div className="modal-eng__caption">
           {curProject.airfield.toUpperCase()}
         </div>
-        <img
-          className="modal-eng__img"
-          src={curProject.img}
-          alt={curProject.img}
+
+        <Slides
+          className="slides-container"
+          propSettings={{
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            // autoplaySpeed: 1000,
+            arrows: false,
+          }}
         />
+
         <div className="modal-eng__sub">DESCRIPTION</div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor

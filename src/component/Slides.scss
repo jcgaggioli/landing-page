@@ -1,0 +1,7 @@
+@use '../styles/_custom.scss' as *;
+@use '../styles/_reset.scss' as *;
+
+.slick-prev:before,
+.slick-next:before {
+  color: $black;
+}
